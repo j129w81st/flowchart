@@ -1,13 +1,3 @@
-<script>
-    // If this page is loaded top-level, redirect or hide everything
-    if (window.top === window.self) {
-      // Option A: Redirect back to your branded page
-      window.location.href = 'https://starbirdsalem.com/flowchart';
-      // Option B: Clear out the content entirely
-      // document.body.innerHTML = '';
-    }
-    </script>
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Interactive Cannabis Flowchart</title>
 
-  <!-- ─── LAYOUT & THEME ─── -->
-  <style>
+  <!-- ─── GUARD: only allow in iframe ─── -->
+  <script>
+    // If this page is loaded top-level, redirect back to your branded page
+    if (window.top === window.self) {
+      window.location.href = 'https://starbirdsalem.com/flowchart';
+    }
+  </script>
+
+  <!-- ─── LAYOUT & THEME ─── -->  <style>
   :root{ --header-h: 90px; }
 
   html,body {
